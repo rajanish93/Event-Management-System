@@ -33,9 +33,12 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::resource('talk_proposals', TalkProposalController::class);
     Route::get('talk_proposals/{id}/review', [TalkProposalController::class, 'review'])->name('talk_proposals.review');
+    Route::post('/talk-proposals/{id}/review', [TalkProposalController::class, 'submitReview'])->name('talk-proposals.submitReview');
 
     Route::resource('reviews', ReviewController::class);
-    Route::get('/reviewers/dashboard', [ReviewController::class, 'dashboard'])->name('reviewers.dashboard');
+    Route::get('/reviewers/dashboard', [ReviewController::class, 'dashboard'])->name('reviewer.dashboard');
+
+    Route::get('/reviewer/proposal/{id}', [TalkProposalController::class, 'show'])->name('reviewer.proposal.show');
 });
 
 

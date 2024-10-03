@@ -15,7 +15,11 @@
                     <a class="nav-link" href="{{ route('reviewer.dashboard') }}">Reviewer Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+                    <!-- <a class="nav-link" href="{{ route('logout') }}">Logout</a> -->
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button class="nav-link" type="submit">Logout</button>
+                    </form>
                 </li>
             </ul>
         </div>

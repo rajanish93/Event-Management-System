@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class TalkProposal extends Model
 {
+
+    protected $fillable = ['speaker_id', 'title', 'description', 'file_path', 'status'];
+
     public function speaker()
     {
         return $this->belongsTo(Speaker::class);

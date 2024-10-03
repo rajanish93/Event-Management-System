@@ -49,6 +49,8 @@
                     <td>{{ ucfirst($proposal->status) }}</td>
                     <td>
                         <a href="{{ route('reviewer.proposal.show', $proposal->id) }}"
+                            class="btn btn-sm btn-info">view</a>
+                        <a href="{{ route('talk_proposals.review', $proposal->id) }}"
                             class="btn btn-sm btn-info">Review</a>
                     </td>
                 </tr>
