@@ -24,5 +24,13 @@
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/your-laravel-app.git
-   cd your-laravel-app
+   git https://github.com/rajanish93/Event-Management-System.git
+   Event-Management-System
+
+2. **install depedency**:
+
+   ```bash
+   composer install
+
+   ```bash
+   install npm
