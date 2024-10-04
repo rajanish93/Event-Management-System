@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('talk_proposals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('speaker_id')->constrained()->onDelete('cascade');
+            // $table->foreignId('speaker_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->text('description');
             $table->string('status')->default('pending');

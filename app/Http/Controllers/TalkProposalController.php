@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageSent;
 use App\Models\TalkProposal;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+
+use App\Events\MyEvent;
 
 
 use App\Models\Review; // Ensure you import the Review model
@@ -13,6 +16,8 @@ class TalkProposalController extends Controller
 {
     public function index()
     {
+
+        event(new MessageSent("Hello World!"));
         $talkProposals = TalkProposal::all();
         return view('talk_proposals.index', compact('talkProposals'));
     }
